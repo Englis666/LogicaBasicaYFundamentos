@@ -1,0 +1,25 @@
+.next,
+.prev {
+  display: inline-block;
+  margin: 1.4rem 0.7rem 0 0;
+  font-weight: bold;
+  font-size: 1.07rem;
+  padding: 0.7rem 1.5rem;
+  color: #1976d2;
+  background: linear-gradient(90deg, #e3f0fc 60%, #f7faff);
+  border: 1.5px solid #b3d4fc;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 1px 4px #1976d111;
+}
+
+.next:hover,
+.prev:hover {
+  background: linear-gradient(90deg, #1976d2 60%, #21a1ff);
+  color: #fff;
+  border-color: #1976d2;
+  box-shadow: 0 2px 12px #1976d244;
+  transform: translateY(-2px) scale(1.05);
+}

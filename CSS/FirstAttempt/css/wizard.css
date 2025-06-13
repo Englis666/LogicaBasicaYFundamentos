@@ -1,0 +1,29 @@
+@import "./base.css";
+@import "./layout.css";
+@import "./steps.css";
+@import "./buttons.css";
+@import "./animations.css";
+.step {
+  display: none;
+}
+#step1:checked ~ .wizard-content .step1 {
+  display: block;
+}
+#step2:checked ~ .wizard-content .step2 {
+  display: block;
+}
+#step3:checked ~ .wizard-content .step3 {
+  display: block;
+}
+.wizard-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.step input {
+  width: 50%;
+  justify-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}

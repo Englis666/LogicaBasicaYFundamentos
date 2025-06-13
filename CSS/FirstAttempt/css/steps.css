@@ -1,0 +1,55 @@
+.steps {
+  display: flex;
+  justify-content: space-between;
+  background: #f7faff;
+  padding: 1.6rem 1.3rem 1.2rem;
+  border-bottom: 2px solid #e3eafc;
+}
+
+.steps label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #b0b8c9;
+  user-select: none;
+  position: relative;
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+.steps label::before {
+  content: attr(data-step);
+  display: block;
+  margin: 0 auto 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #e3eafc;
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 1.22rem;
+  border: 2.5px solid #dde8f7;
+  box-shadow: 0 2px 8px #1976d111;
+}
+
+:is(
+    #step1:checked ~ .steps label[for="step1"],
+    #step2:checked ~ .steps label[for="step2"],
+    #step3:checked ~ .steps label[for="step3"]
+  ) {
+  color: #1976d2;
+  text-shadow: 0 2px 8px #1976d122;
+}
+
+:is(
+    #step1:checked ~ .steps label[for="step1"]::before,
+    #step2:checked ~ .steps label[for="step2"]::before,
+    #step3:checked ~ .steps label[for="step3"]::before
+  ) {
+  background: linear-gradient(135deg, #1976d2, #21a1ff);
+  color: #fff;
+  border-color: #1976d2;
+  box-shadow: 0 4px 16px #1976d244;
+}

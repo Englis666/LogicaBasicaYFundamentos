@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form CSS WIZARD</title>
+    <link rel="stylesheet" href="css/wizard.css" />
+  </head>
+
+  <body>
+    <div class="wizard-container">
+      <form class="wizard">
+        <input type="radio" name="step" id="step1" checked />
+        <input type="radio" name="step" id="step2" />
+        <input type="radio" name="step" id="step3" />
+
+        <!--
+        div.steps>label[for="step$" data-step="$"]{Datos $}*3
+    -->
+        <div class="steps">
+          <label for="step1" data-step="1">Datos</label>
+          <label for="step2" data-step="2">Datos</label>
+          <label for="step3" data-step="3">Datos</label>
+        </div>
+
+        <!--     div.wizard-content>(div.step.step1>h2{Datos
+    personales}+input[type=text][placeholder="Nombre"
+    required]+br+label.next[for=step2]{Siguiente
+    →})+(div.step.step2>h2{Contacto}+input[type=email][placeholder="Email"
+    required]+br+label.prev[for=step1]{← Atrás}+label.next[for=step3]{Siguiente
+    →})+(div.step.step3>h2{Confirmar}+p{¡Listo para
+    enviar!}+label.prev[for=step2]{← Atrás}+button[type=submit]{Enviar}) -->
+
+        <div class="wizard-content">
+          <div class="step step1">
+            <h2>Datos Personales</h2>
+            <input type="text" placeholder="Nombre" required />
+            <br />
+            <label for="step2" class="next">Siguiente →</label>
+          </div>
+          <div class="step step2">
+            <h2>Contacto</h2>
+            <input type="email" placeholder="Email" required />
+            <br />
+            <label for="step1" class="prev">← Atrás</label>
+            <label for="step3" class="next">Siguiente →</label>
+          </div>
+          <div class="step step3">
+            <h2>Confirmar</h2>
+            <p>¡Listo para enviar!</p>
+            <label for="step2" class="prev">← Atrás</label>
+            <button type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
